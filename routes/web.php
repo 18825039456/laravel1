@@ -12,5 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+   // return view('welcome');
+
+    return "你好 laravel!";
 });
+
+Route::get('/', 'StaticPagesController@home');
+Route::get('/help', 'StaticPagesController@help');
+Route::get('/about', 'StaticPagesController@about');
